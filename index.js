@@ -13,6 +13,7 @@ const reviewRoutes = require('./routes/reviews');
 const wishlistRoutes = require('./routes/wishlists');
 const contactRoutes = require('./routes/contact');
 const cors = require('cors');
+const port = 5000 || process.env.PORT;
 
 
 require('dotenv').config();
@@ -49,7 +50,7 @@ app.use('/api/v1/wishlist', wishlistRoutes);
 app.use('/api/v1/contact', contactRoutes);
 
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log('Server is running on port 5000');
 });
 
